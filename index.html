@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cloud Café | AWS Troubleshooting Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
 <body>
   <header class="hero">
@@ -48,16 +48,16 @@
           <div class="scene-title" id="scene-title">Coffee Shop</div>
           <div class="cafe-scene">
             <img class="scene-art" src="assets/cloud-cafe-scene.png" alt="Warm illustrated Cloud Café interior with cats, stick-figure staff, counter, signs, plants, and tables." />
-            <button class="cafe-object door-path" data-object="door-path" type="button" aria-label="Fix broken entrance path"><span class="hotspot-label">Entrance path</span></button>
-            <button class="cafe-object open-sign" data-object="open-sign" type="button" aria-label="Correct open sign"><span class="hotspot-label sign-text">OPEN</span></button>
-            <button class="cafe-object guard" data-object="guard" type="button" aria-label="Adjust guard access rule"><span class="hotspot-label">Guard</span></button>
-            <button class="cafe-object chair" data-object="chair" type="button" aria-label="Move blocking chair"><span class="hotspot-label">Chair</span></button>
-            <button class="cafe-object register" data-object="register" type="button" aria-label="Turn on cash register"><span class="hotspot-label register-text">OFF</span></button>
-            <button class="cafe-object coffee-machine" data-object="coffee-machine" type="button" aria-label="Fix overheating coffee machine"><span class="hotspot-label">Machine</span><span class="steam steam-one"></span><span class="steam steam-two"></span><span class="steam steam-three"></span></button>
-            <button class="cafe-object order-pile" data-object="order-pile" type="button" aria-label="Organize order pile"><span class="hotspot-label">Orders</span></button>
-            <button class="cafe-object staff-pass" data-object="staff-pass" type="button" aria-label="Grant staff access pass"><span class="hotspot-label">SSM</span></button>
-            <button class="cafe-object storage-box" data-object="storage-box" type="button" aria-label="Label storage box"><span class="hotspot-label">S3</span></button>
-            <button class="cafe-object log-book" data-object="log-book" type="button" aria-label="Enable log book"><span class="hotspot-label">Logs</span></button>
+            <button class="cafe-object door-path" data-object="door-path" type="button" aria-label="Fix broken entrance path"><span class="anomaly broken-route"></span><span class="hotspot-label">Entrance path</span></button>
+            <button class="cafe-object open-sign" data-object="open-sign" type="button" aria-label="Correct open sign"><span class="anomaly closed-placard sign-text">CLOSED</span><span class="hotspot-label">Open sign</span></button>
+            <button class="cafe-object guard" data-object="guard" type="button" aria-label="Adjust guard access rule"><span class="anomaly blocked-barrier">BLOCKED</span><span class="hotspot-label">Guard</span></button>
+            <button class="cafe-object chair" data-object="chair" type="button" aria-label="Move blocking chair"><span class="anomaly traffic-cone"></span><span class="hotspot-label">Chair</span></button>
+            <button class="cafe-object register" data-object="register" type="button" aria-label="Turn on cash register"><span class="anomaly off-screen register-text">OFF</span><span class="hotspot-label">Register</span></button>
+            <button class="cafe-object coffee-machine" data-object="coffee-machine" type="button" aria-label="Fix overheating coffee machine"><span class="anomaly warning-badge">!</span><span class="steam steam-one"></span><span class="steam steam-two"></span><span class="steam steam-three"></span><span class="hotspot-label">Machine</span></button>
+            <button class="cafe-object order-pile" data-object="order-pile" type="button" aria-label="Organize order pile"><span class="anomaly order-overflow">99+</span><span class="hotspot-label">Orders</span></button>
+            <button class="cafe-object staff-pass" data-object="staff-pass" type="button" aria-label="Grant staff access pass"><span class="anomaly denied-pass">NO ACCESS</span><span class="hotspot-label">SSM pass</span></button>
+            <button class="cafe-object storage-box" data-object="storage-box" type="button" aria-label="Label storage box"><span class="anomaly question-box">?</span><span class="hotspot-label">Storage box</span></button>
+            <button class="cafe-object log-book" data-object="log-book" type="button" aria-label="Enable log book"><span class="anomaly blank-log">NO LOGS</span><span class="hotspot-label">Log book</span></button>
           </div>
         </section>
       </div>
@@ -99,6 +99,6 @@
   </main>
 
   <footer class="footer"><p>Cloud Café: AWS Troubleshooting Portfolio</p><a href="https://github.com/phamkhanhnhat78-stack/cloud-cafe-aws-troubleshooting" target="_blank" rel="noreferrer">GitHub Repository</a></footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

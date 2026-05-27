@@ -41,6 +41,8 @@ The random scenarios map to these AWS topics:
 - One-page portfolio website
 - Random troubleshooting scenario on page load
 - Clean café illustration with visually distinct cats, stick-figure staff, and clickable troubleshooting props
+- Three interaction contexts: entrance/network access, inside café/application operations, and back-office secure operations
+- Ten random issues represented by intentionally inconsistent anomaly objects in the café scene
 - Pop-up explanation after the visitor fixes an issue
 - HR-friendly explanation and technical AWS mapping
 - AWS documentation section
