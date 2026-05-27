@@ -54,6 +54,8 @@ cloud-cafe-aws-troubleshooting/
 ├── index.html
 ├── style.css
 ├── script.js
+├── assets/
+│   └── cloud-cafe-scene.png
 ├── README.md
 └── docs/
     └── troubleshooting-notes.md
