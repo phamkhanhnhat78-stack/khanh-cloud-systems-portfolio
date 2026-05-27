@@ -18,11 +18,8 @@
     </nav>
     <section class="hero-content">
       <p class="eyebrow">Interactive AWS Troubleshooting Portfolio</p>
-      <h1>Fix a stick-figure coffee shop. Learn the cloud problem behind it.</h1>
-      <p class="hero-text">
-        Cloud Café uses a hand-drawn coffee shop scene to explain real AWS operations issues: routing,
-        security rules, EC2 health, monitoring, alerting, queues, IAM access, S3 organization, and logs.
-      </p>
+      <h1>Fix a café problem. Learn the AWS issue behind it.</h1>
+      <p class="hero-text">A calm café scene explains cloud operations problems. Cats are customers, stick figures are staff, and highlighted props are AWS troubleshooting issues.</p>
       <div class="hero-actions">
         <a class="button primary" href="#game">Start Random Issue</a>
         <a class="button secondary" href="https://github.com/phamkhanhnhat78-stack/cloud-cafe-aws-troubleshooting" target="_blank" rel="noreferrer">View GitHub Repo</a>
@@ -35,140 +32,50 @@
       <div class="section-heading">
         <p class="eyebrow">One issue per visit</p>
         <h2>Cloud Café Troubleshooting Game</h2>
-        <p>
-          A random café problem appears. Click the highlighted doodle object to fix it, then read the AWS equivalent.
-          Refresh the page or click <strong>Try Another Issue</strong> to see a new scenario.
-        </p>
+        <p>A random café issue appears. Click the highlighted object to fix it. The popup explains the real café problem and the AWS equivalent.</p>
       </div>
 
       <div class="game-layout">
         <aside class="issue-card">
           <p class="label">Current issue</p>
           <h3 id="issue-title">Loading issue...</h3>
-          <p id="issue-instruction">Click the correct object in the café scene.</p>
-          <div class="status-box">
-            <span id="status-dot" class="status-dot"></span>
-            <span id="status-text">Waiting for fix</span>
-          </div>
+          <p id="issue-instruction">Click the highlighted object in the café.</p>
+          <div class="status-box"><span id="status-dot" class="status-dot"></span><span id="status-text">Waiting for fix</span></div>
           <button id="new-issue-button" class="button secondary" type="button">Try Another Issue</button>
         </aside>
 
-        <section class="cafe-stage" aria-label="Interactive hand-drawn stick-figure coffee shop scene">
+        <section class="cafe-stage" aria-label="Interactive illustrated café scene">
           <div class="scene-title" id="scene-title">Coffee Shop</div>
-          <svg class="cafe-svg" viewBox="0 0 1000 620" role="img" aria-label="Cloud Café stick figure troubleshooting scene">
-            <defs>
-              <filter id="roughen">
-                <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" result="noise" />
-                <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2" />
-              </filter>
-            </defs>
+          <div class="cafe-scene">
+            <div class="wall-art cafe-sign">MEOW<br>CAFE</div>
+            <div class="wall-art menu-board">MENU</div>
+            <div class="window"><span>OPEN</span></div>
+            <div class="sofa"></div>
+            <div class="plant plant-one"></div>
+            <div class="plant plant-two"></div>
+            <div class="shelf shelf-one"></div>
+            <div class="shelf shelf-two"></div>
+            <div class="counter"></div>
+            <div class="table table-one"></div>
+            <div class="table table-two"></div>
 
-            <rect x="20" y="20" width="960" height="580" rx="24" class="paper-bg" />
-            <path d="M70 500 C230 490 310 505 455 492 C610 478 740 497 930 486" class="street-line" />
-            <text x="760" y="530" class="doodle-text small">street / internet</text>
+            <div class="cat-customer seated-cat"><span class="cat-ear left"></span><span class="cat-ear right"></span><span class="cat-face">• •<br>ᴗ</span><span class="cat-tail"></span></div>
+            <div class="cat-customer counter-cat"><span class="cat-ear left"></span><span class="cat-ear right"></span><span class="cat-face">• •<br>︿</span><span class="cat-tail"></span></div>
+            <div class="stick-staff cashier-staff"><span class="head"></span><span class="body"></span><span class="arm arm-left"></span><span class="arm arm-right"></span><span class="leg leg-left"></span><span class="leg leg-right"></span></div>
+            <div class="stick-staff cleaner-staff"><span class="head"></span><span class="body"></span><span class="arm arm-left"></span><span class="arm arm-right"></span><span class="leg leg-left"></span><span class="leg leg-right"></span></div>
+            <div class="stick-staff delivery-staff"><span class="cap"></span><span class="head"></span><span class="body"></span><span class="arm arm-left"></span><span class="arm arm-right"></span><span class="leg leg-left"></span><span class="leg leg-right"></span></div>
 
-            <path d="M130 155 L220 80 L810 80 L900 155" class="roof" />
-            <path d="M155 155 L155 470 L875 470 L875 155 Z" class="building" />
-            <text x="420" y="135" class="doodle-text title">Cloud Café</text>
-
-            <g class="doodle-object" data-object="door-path" tabindex="0" role="button" aria-label="Broken entrance path">
-              <path d="M250 470 C242 498 235 520 220 545" class="broken-line" />
-              <path d="M300 470 C308 500 320 525 338 548" class="broken-line" />
-              <text x="180" y="575" class="doodle-text tiny">broken path</text>
-              <rect x="175" y="450" width="190" height="130" class="hitbox" />
-            </g>
-
-            <g class="doodle-object" data-object="open-sign" tabindex="0" role="button" aria-label="Closed sign">
-              <path d="M190 175 L300 172 L300 220 L190 224 Z" class="sign-box" />
-              <path d="M210 170 L210 145 M280 172 L280 145" class="thin-line" />
-              <text x="207" y="205" class="doodle-text sign-text">CLOSED</text>
-              <rect x="170" y="135" width="155" height="110" class="hitbox" />
-            </g>
-
-            <g class="doodle-object" data-object="guard" tabindex="0" role="button" aria-label="Guard blocking customers">
-              <circle cx="385" cy="230" r="24" class="person-head" />
-              <path d="M385 254 L385 325 M350 278 L420 278 M385 325 L355 382 M385 325 L420 382" class="person-line" />
-              <path d="M342 245 C365 230 405 228 430 247" class="thin-line" />
-              <text x="340" y="415" class="doodle-text tiny">guard blocks cats</text>
-              <rect x="320" y="195" width="130" height="220" class="hitbox" />
-            </g>
-
-            <g class="cat cat-one">
-              <path d="M82 420 L98 390 L114 420" class="cat-ear" />
-              <circle cx="98" cy="430" r="31" class="cat-head" />
-              <path d="M88 425 L88 425 M108 425 L108 425 M86 443 C98 452 109 443 109 443" class="cat-face" />
-              <path d="M72 435 L45 428 M72 445 L45 450 M124 435 L150 428 M124 445 L150 450" class="cat-face" />
-              <path d="M98 462 L98 520 M98 492 L70 520 M98 492 L126 520" class="cat-body" />
-            </g>
-            <g class="cat cat-two">
-              <path d="M78 320 L94 292 L110 320" class="cat-ear" />
-              <circle cx="94" cy="330" r="29" class="cat-head" />
-              <path d="M85 326 L85 326 M103 326 L103 326 M84 344 C94 351 105 344 105 344" class="cat-face" />
-              <path d="M68 335 L44 330 M68 345 L44 350 M120 335 L145 330 M120 345 L145 350" class="cat-face" />
-              <path d="M94 360 L94 415 M94 385 L68 414 M94 385 L120 414" class="cat-body" />
-            </g>
-
-            <g class="doodle-object chair-object" data-object="chair" tabindex="0" role="button" aria-label="Chair blocking cashier">
-              <path d="M430 355 L505 355 L490 420 L445 420 Z" class="object-line" />
-              <path d="M445 420 L435 455 M490 420 L508 455 M430 355 L420 320 L492 320 L505 355" class="object-line" />
-              <text x="415" y="480" class="doodle-text tiny">chair</text>
-              <rect x="400" y="300" width="135" height="180" class="hitbox" />
-            </g>
-
-            <g class="doodle-object" data-object="register" tabindex="0" role="button" aria-label="Cash register off">
-              <path d="M560 326 L705 326 L705 420 L560 420 Z" class="object-line" />
-              <path d="M585 298 L675 298 L690 326 L570 326 Z" class="object-line" />
-              <path d="M585 365 L675 365" class="thin-line" />
-              <text x="592" y="395" class="doodle-text tiny register-text">OFF</text>
-              <rect x="540" y="280" width="190" height="170" class="hitbox" />
-            </g>
-
-            <g class="staff-stick">
-              <circle cx="742" cy="275" r="24" class="person-head" />
-              <path d="M742 299 L742 365 M710 324 L775 324 M742 365 L715 420 M742 365 L770 420" class="person-line" />
-              <path d="M722 312 L762 312 L752 354 L732 354 Z" class="apron" />
-              <text x="705" y="450" class="doodle-text tiny">staff</text>
-            </g>
-
-            <g class="doodle-object" data-object="coffee-machine" tabindex="0" role="button" aria-label="Overheated coffee machine">
-              <path d="M755 160 L870 160 L870 282 L755 282 Z" class="object-line" />
-              <path d="M780 190 L845 190 L845 235 L780 235 Z" class="thin-line" />
-              <path d="M786 260 L840 260" class="thin-line" />
-              <path class="smoke" d="M775 145 C745 115 805 105 775 78 M825 145 C800 115 855 105 830 78" />
-              <text x="744" y="310" class="doodle-text tiny">overheated machine</text>
-              <rect x="730" y="70" width="165" height="250" class="hitbox" />
-            </g>
-
-            <g class="doodle-object" data-object="order-pile" tabindex="0" role="button" aria-label="Too many orders">
-              <path d="M705 455 L790 455 L780 520 L715 520 Z" class="object-line" />
-              <path d="M710 445 L760 430 L795 450 M725 428 L770 418 L803 442" class="thin-line" />
-              <text x="695" y="548" class="doodle-text tiny">order pile</text>
-              <rect x="680" y="405" width="145" height="155" class="hitbox" />
-            </g>
-
-            <g class="doodle-object" data-object="staff-pass" tabindex="0" role="button" aria-label="SSM access pass">
-              <path d="M210 275 L320 275 L320 355 L210 355 Z" class="object-line" />
-              <text x="226" y="305" class="doodle-text tiny">SSM</text>
-              <text x="226" y="330" class="doodle-text tiny">PASS</text>
-              <path d="M245 365 L245 430 M245 392 L220 420 M245 392 L270 420" class="person-line" />
-              <circle cx="245" cy="342" r="18" class="person-head" />
-              <rect x="190" y="250" width="150" height="190" class="hitbox" />
-            </g>
-
-            <g class="doodle-object" data-object="storage-box" tabindex="0" role="button" aria-label="Unlabeled S3 storage box">
-              <path d="M825 360 L930 360 L930 445 L825 445 Z" class="object-line" />
-              <path d="M825 360 L875 325 L930 360 M875 325 L875 445" class="thin-line" />
-              <text x="842" y="412" class="doodle-text tiny">S3 ?</text>
-              <rect x="800" y="315" width="155" height="150" class="hitbox" />
-            </g>
-
-            <g class="doodle-object" data-object="log-book" tabindex="0" role="button" aria-label="Empty log book">
-              <path d="M520 160 L645 160 L645 245 L520 245 Z" class="object-line" />
-              <path d="M582 160 L582 245" class="thin-line" />
-              <text x="532" y="205" class="doodle-text tiny">log?</text>
-              <rect x="500" y="140" width="170" height="125" class="hitbox" />
-            </g>
-          </svg>
+            <button class="doodle-object door-path" data-object="door-path" type="button"><span>broken entrance</span></button>
+            <button class="doodle-object open-sign" data-object="open-sign" type="button"><span class="sign-text">CLOSED</span></button>
+            <button class="doodle-object guard" data-object="guard" type="button"><span>guard</span></button>
+            <button class="doodle-object chair" data-object="chair" type="button"><span>chair</span></button>
+            <button class="doodle-object register" data-object="register" type="button"><span class="register-text">OFF</span></button>
+            <button class="doodle-object coffee-machine" data-object="coffee-machine" type="button"><span>coffee<br>machine</span></button>
+            <button class="doodle-object order-pile" data-object="order-pile" type="button"><span>orders</span></button>
+            <button class="doodle-object staff-pass" data-object="staff-pass" type="button"><span>SSM<br>PASS</span></button>
+            <button class="doodle-object storage-box" data-object="storage-box" type="button"><span>S3 ?</span></button>
+            <button class="doodle-object log-book" data-object="log-book" type="button"><span>log?</span></button>
+          </div>
         </section>
       </div>
     </section>
@@ -183,38 +90,19 @@
           <div><h3>AWS equivalent</h3><p id="modal-cloud"></p></div>
           <div><h3>AWS services</h3><p id="modal-services"></p></div>
         </div>
-        <div class="modal-actions">
-          <button id="modal-new-issue" class="button primary" type="button">Try Another Issue</button>
-          <a class="button secondary" href="#documentation">View AWS Documentation</a>
-        </div>
+        <div class="modal-actions"><button id="modal-new-issue" class="button primary" type="button">Try Another Issue</button><a class="button secondary" href="#documentation">View AWS Documentation</a></div>
       </div>
     </div>
 
     <section id="documentation" class="section docs-section">
-      <div class="section-heading">
-        <p class="eyebrow">Technical documentation</p>
-        <h2>Real AWS Project Behind the Game</h2>
-        <p>The game explains the same skills used in a secure AWS operations project: private EC2 access, VPC networking, monitoring, alerting, and incident-response thinking.</p>
-      </div>
+      <div class="section-heading"><p class="eyebrow">Technical documentation</p><h2>Real AWS Project Behind the Game</h2><p>The game explains the same skills used in a secure AWS operations project: private EC2 access, VPC networking, monitoring, alerting, and incident-response thinking.</p></div>
       <div class="cards-grid">
         <article class="info-card"><h3>VPC Networking</h3><p>Public and private subnets separate internet-facing resources from internal workloads.</p></article>
         <article class="info-card"><h3>Private EC2</h3><p>The internal server has no public IP and should not be directly exposed to the internet.</p></article>
         <article class="info-card"><h3>Session Manager</h3><p>Administrators can access the private EC2 instance through IAM and AWS Systems Manager.</p></article>
         <article class="info-card"><h3>CloudWatch + SNS</h3><p>CPU alarms detect high utilization and send email notifications through SNS.</p></article>
       </div>
-      <div class="workflow">
-        <h3>Planned AWS workflow</h3>
-        <ol>
-          <li>Create a custom VPC with public and private subnets.</li>
-          <li>Attach an Internet Gateway to the public route table.</li>
-          <li>Use a NAT Gateway for private subnet outbound internet access.</li>
-          <li>Launch a private EC2 instance without a public IP address.</li>
-          <li>Attach an IAM role with Systems Manager permissions.</li>
-          <li>Connect using Session Manager instead of opening SSH to the world.</li>
-          <li>Create a CloudWatch CPU alarm and connect it to an SNS email topic.</li>
-          <li>Run a stress test, confirm the alarm, and document screenshots.</li>
-        </ol>
-      </div>
+      <div class="workflow"><h3>Planned AWS workflow</h3><ol><li>Create a custom VPC with public and private subnets.</li><li>Attach an Internet Gateway to the public route table.</li><li>Use a NAT Gateway for private subnet outbound internet access.</li><li>Launch a private EC2 instance without a public IP address.</li><li>Attach an IAM role with Systems Manager permissions.</li><li>Connect using Session Manager instead of opening SSH to the world.</li><li>Create a CloudWatch CPU alarm and connect it to an SNS email topic.</li><li>Run a stress test, confirm the alarm, and document screenshots.</li></ol></div>
     </section>
 
     <section id="troubleshooting" class="section troubleshooting-section">
@@ -227,11 +115,7 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <p>Cloud Café: AWS Troubleshooting Portfolio</p>
-    <a href="https://github.com/phamkhanhnhat78-stack/cloud-cafe-aws-troubleshooting" target="_blank" rel="noreferrer">GitHub Repository</a>
-  </footer>
-
+  <footer class="footer"><p>Cloud Café: AWS Troubleshooting Portfolio</p><a href="https://github.com/phamkhanhnhat78-stack/cloud-cafe-aws-troubleshooting" target="_blank" rel="noreferrer">GitHub Repository</a></footer>
   <script src="script.js"></script>
 </body>
 </html>
