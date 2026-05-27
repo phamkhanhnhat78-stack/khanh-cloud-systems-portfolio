@@ -92,10 +92,15 @@ function renderIssue(issue) {
     }
   });
   if (activeObject) {
+    const centerActiveObject = () => {
+      activeObject.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+      const rect = activeObject.getBoundingClientRect();
+      const top = window.scrollY + rect.top - ((window.innerHeight - rect.height) / 2);
+      window.scrollTo({ top, behavior: "smooth" });
+    };
     window.requestAnimationFrame(() => {
-      window.setTimeout(() => {
-        activeObject.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
-      }, 80);
+      window.setTimeout(centerActiveObject, 80);
+      window.setTimeout(centerActiveObject, 520);
     });
   }
 }
