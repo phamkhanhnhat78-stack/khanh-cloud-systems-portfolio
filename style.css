@@ -398,14 +398,52 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
   text-align: center;
   box-shadow: 4px 4px 0 rgba(0, 0, 0, .2);
 }
-.order-overflow {
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: #d64d3d;
-  color: #fff;
-  font-size: 21px;
-  line-height: 50px;
+.order-printer {
+  width: 152px;
+  height: 134px;
+  background: transparent;
+  color: #8f2d24;
+  font-size: 18px;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+}
+.order-printer::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 62px;
+  width: 82px;
+  height: 44px;
+  border: 4px solid var(--line);
+  border-radius: 8px;
+  background: #3b4550;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, .2);
+}
+.order-printer::after {
+  content: "99+";
+  position: absolute;
+  left: 83px;
+  top: 13px;
+  width: 50px;
+  height: 42px;
+  border: 3px solid #8f2d24;
+  border-radius: 6px;
+  background: #fffdf8;
+  color: #8f2d24;
+  font-weight: 900;
+  line-height: 36px;
+  text-align: center;
+  transform: rotate(12deg);
+  box-shadow:
+    -28px 12px 0 -3px #fffdf8,
+    -28px 12px 0 0 #8f2d24,
+    -54px 23px 0 -3px #fffdf8,
+    -54px 23px 0 0 #8f2d24,
+    -13px 52px 0 -3px #fffdf8,
+    -13px 52px 0 0 #8f2d24,
+    14px 62px 0 -3px #fffdf8,
+    14px 62px 0 0 #8f2d24,
+    4px 4px 0 rgba(0, 0, 0, .18);
 }
 .denied-pass {
   width: 94px;
@@ -687,10 +725,10 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
 .steam-three { left: 90px; }
 .coffee-machine.fixed .steam { display: none; }
 .scene-d .order-pile {
-  left: 51.8%;
-  top: 74.2%;
-  width: 9.4%;
-  height: 13%;
+  left: 49.2%;
+  top: 70%;
+  width: 15.8%;
+  height: 21%;
 }
 .scene-d .staff-pass {
   left: 50.4%;
