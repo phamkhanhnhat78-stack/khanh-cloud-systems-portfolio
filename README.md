@@ -1,6 +1,6 @@
 # Cloud Café: AWS Troubleshooting Portfolio
 
-Cloud Café is an interactive AWS troubleshooting portfolio project. It uses a simple stick-figure coffee shop simulation to explain real cloud operations problems in a way that is easy for both recruiters and technical interviewers to understand.
+Cloud Café is an interactive AWS troubleshooting portfolio project. It uses a clean illustrated coffee shop scene to explain real cloud operations problems in a way that is easy for both recruiters and technical interviewers to understand.
 
 Live website: GitHub Pages link will be available after Pages is enabled in repository settings.
 
@@ -40,7 +40,7 @@ The random scenarios map to these AWS topics:
 
 - One-page portfolio website
 - Random troubleshooting scenario on page load
-- Clickable stick-figure coffee shop objects
+- Clean café illustration with visually distinct cats, stick-figure staff, and clickable troubleshooting props
 - Pop-up explanation after the visitor fixes an issue
 - HR-friendly explanation and technical AWS mapping
 - AWS documentation section
@@ -86,7 +86,6 @@ Cloud Café: AWS Troubleshooting Portfolio | HTML, CSS, JavaScript, GitHub Pages
 
 ## Future Improvements
 
-- Replace placeholder objects with custom hand-drawn stick-figure images.
 - Add real AWS screenshots from the completed lab.
 - Add an architecture diagram.
 - Add bilingual English/Chinese explanation toggle.

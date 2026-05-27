@@ -11,7 +11,7 @@ const issues = [
   { id: "log-book", title: "No monitoring records", scene: "Scene C: Back office / logging and audit", instruction: "The log book is empty. Click it to start recording events.", fixedTitle: "You enabled operational records.", real: "After an incident, the café needed records to understand what happened and who changed what.", cloud: "This is similar to enabling audit and operational logs so teams can investigate incidents.", services: "CloudTrail, CloudWatch Logs, audit history" }
 ];
 
-const clickableObjects = Array.from(document.querySelectorAll(".doodle-object"));
+const clickableObjects = Array.from(document.querySelectorAll(".cafe-object"));
 const issueTitle = document.getElementById("issue-title");
 const issueInstruction = document.getElementById("issue-instruction");
 const sceneTitle = document.getElementById("scene-title");
@@ -60,7 +60,7 @@ function pickRandomIssue() {
 
 function fixIssue(id) {
   if (!currentIssue || id !== currentIssue.id) {
-    statusText.textContent = "That object is not the current issue. Try the highlighted doodle.";
+    statusText.textContent = "That prop is not the current issue. Try the highlighted café object.";
     return;
   }
   const target = objectById(id);
