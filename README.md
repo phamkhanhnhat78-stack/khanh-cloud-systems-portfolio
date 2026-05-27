@@ -1,6 +1,6 @@
 # Cloud Café: AWS Troubleshooting Portfolio
 
-Cloud Café is an interactive AWS troubleshooting portfolio project. It uses a clean illustrated coffee shop scene to explain real cloud operations problems in a way that is easy for both recruiters and technical interviewers to understand.
+Cloud Café is an interactive AWS troubleshooting portfolio project. It uses three clean illustrated coffee shop scenes to explain real cloud operations problems in a way that is easy for both recruiters and technical interviewers to understand.
 
 Live website: GitHub Pages link will be available after Pages is enabled in repository settings.
 
@@ -30,9 +30,10 @@ The random scenarios map to these AWS topics:
 | Guard blocks all customers | Overly restrictive inbound access | Security Group |
 | Chair blocks cashier | Traffic blocked after reaching network | Security Group, Network ACL, EC2 |
 | Cash register off | Server or application down | EC2, systemctl, application process |
-| Coffee machine overheating | High CPU usage | CloudWatch Alarm, SNS |
+| Mouse thief leaves no audit trail | Suspicious storage access needs audit visibility | S3 logs, CloudTrail, CloudWatch Logs |
 | Too many orders | Need workload buffering | SQS |
 | Staff lacks back-office access | Need secure private access | IAM, Systems Manager Session Manager, Private EC2 |
+| Order data is not encrypted | Protect sensitive stored and transmitted data | KMS, TLS, S3 encryption |
 | Unlabeled storage box | Storage organization and access control | S3, IAM |
 | Empty log book | Missing audit or operational records | CloudTrail, CloudWatch Logs |
 
@@ -40,9 +41,10 @@ The random scenarios map to these AWS topics:
 
 - One-page portfolio website
 - Random troubleshooting scenario on page load
-- Clean café illustration with visually distinct cats, stick-figure staff, and clickable troubleshooting props
-- Three interaction contexts: entrance/network access, inside café/application operations, and back-office secure operations
-- Ten random issues represented by intentionally inconsistent anomaly objects in the café scene
+- Clean café illustrations with visually distinct cats, stick-figure staff, and clickable troubleshooting props
+- Three distinct interaction contexts: street entrance/front-of-house network and frontend, warehouse storage layer, and manager office operations/access/encryption
+- Ten random issues represented by intentionally inconsistent anomaly objects across the three scenes
+- Previous/next scene controls so visitors can browse the situations directly
 - Pop-up explanation after the visitor fixes an issue
 - HR-friendly explanation and technical AWS mapping
 - AWS documentation section
@@ -57,7 +59,9 @@ cloud-cafe-aws-troubleshooting/
 ├── style.css
 ├── script.js
 ├── assets/
-│   └── cloud-cafe-scene.png
+│   ├── cloud-cafe-network.png
+│   ├── cloud-cafe-storage.png
+│   └── cloud-cafe-office.png
 ├── README.md
 └── docs/
     └── troubleshooting-notes.md
@@ -84,7 +88,7 @@ This website is designed to connect with a real AWS cloud operations project:
 Cloud Café: AWS Troubleshooting Portfolio | HTML, CSS, JavaScript, GitHub Pages, AWS VPC, EC2, IAM, SSM, CloudWatch, SNS
 
 - Built an interactive cloud troubleshooting portfolio website that maps coffee shop operational issues to AWS infrastructure problems.
-- Created random front-end scenarios explaining route table issues, security group blocking, EC2 service failure, high CPU utilization, secure private access, S3 organization, and logging.
+- Created random front-end scenarios explaining route table issues, security group blocking, EC2 service failure, workload buffering, secure private access, S3 organization, storage auditing, and encryption.
 - Designed the portfolio to support a secure AWS operations project using VPC, private EC2, IAM roles, Systems Manager Session Manager, CloudWatch alarms, and SNS notifications.
 - Published the project through GitHub Pages with documentation and troubleshooting notes.
 

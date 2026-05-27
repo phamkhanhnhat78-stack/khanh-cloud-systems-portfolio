@@ -137,25 +137,48 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
   pointer-events: none;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .35);
 }
-.scene-title {
+.scene-toolbar {
   position: sticky;
   left: 18px;
   top: 14px;
   z-index: 20;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   max-width: calc(100% - 36px);
   margin: 14px 0 -54px 18px;
+}
+.scene-title {
+  display: inline-block;
   padding: 8px 14px;
   border: 2px solid var(--line);
   border-radius: 999px;
   background: rgba(255, 253, 248, .95);
   font-weight: 800;
 }
+.scene-arrow {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 253, 248, .96);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, .17);
+}
+.scene-arrow:hover,
+.scene-arrow:focus-visible {
+  outline: none;
+  background: var(--highlight);
+}
 .cafe-scene {
   position: relative;
   width: 100%;
   min-width: 760px;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: #ead7b9;
   transform-origin: top left;
@@ -172,6 +195,7 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
 }
 .cafe-object {
   position: absolute;
+  display: none;
   z-index: 10;
   border: 3px solid transparent;
   border-radius: 14px;
@@ -179,6 +203,9 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
   color: var(--ink);
   cursor: pointer;
   transition: background .15s ease, border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+.cafe-object.scene-object {
+  display: block;
 }
 .anomaly {
   display: none;
@@ -405,42 +432,42 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
   font-size: 11px;
   letter-spacing: .08em;
 }
-.door-path {
+.scene-a .door-path {
   left: 18.2%;
-  top: 50.8%;
+  top: 58%;
   width: 9.4%;
-  height: 16.6%;
+  height: 18%;
 }
-.open-sign {
-  left: 19.9%;
-  top: 20.9%;
-  width: 6.8%;
-  height: 9%;
+.scene-a .open-sign {
+  left: 18.8%;
+  top: 45.5%;
+  width: 7.2%;
+  height: 10%;
 }
-.guard {
-  left: 28.5%;
-  top: 63.5%;
-  width: 9.8%;
-  height: 23.9%;
+.scene-a .guard {
+  left: 19.3%;
+  top: 63.4%;
+  width: 10.5%;
+  height: 21%;
 }
-.chair {
-  left: 73.9%;
-  top: 77.6%;
-  width: 16.9%;
-  height: 18.6%;
+.scene-a .chair {
+  left: 45.8%;
+  top: 74%;
+  width: 12.6%;
+  height: 16%;
 }
 .chair.fixed { transform: translate(24px, 6px) rotate(12deg); }
-.register {
-  left: 70.2%;
-  top: 44.4%;
-  width: 10.4%;
-  height: 11.3%;
+.scene-c .register {
+  left: 64.4%;
+  top: 50.7%;
+  width: 10.2%;
+  height: 12%;
 }
-.coffee-machine {
-  left: 86.1%;
-  top: 37.5%;
-  width: 11.7%;
-  height: 15.2%;
+.scene-c .coffee-machine {
+  left: 61.6%;
+  top: 51.2%;
+  width: 10.8%;
+  height: 14%;
 }
 .steam {
   position: absolute;
@@ -455,29 +482,29 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
 .steam-two { left: 66px; top: -10px; }
 .steam-three { left: 90px; }
 .coffee-machine.fixed .steam { display: none; }
-.order-pile {
-  left: 62.2%;
-  top: 40%;
-  width: 7.9%;
-  height: 11.7%;
+.scene-c .order-pile {
+  left: 51.8%;
+  top: 74.2%;
+  width: 9.4%;
+  height: 13%;
 }
-.staff-pass {
-  left: 74%;
-  top: 39.3%;
-  width: 11.1%;
-  height: 25.4%;
+.scene-c .staff-pass {
+  left: 77.2%;
+  top: 50.4%;
+  width: 9.5%;
+  height: 19%;
 }
-.storage-box {
-  left: 35.9%;
-  top: 64.5%;
-  width: 12.4%;
-  height: 17.6%;
+.scene-b .storage-box {
+  left: 34.2%;
+  top: 49.5%;
+  width: 11.6%;
+  height: 16%;
 }
-.log-book {
-  left: 86.2%;
-  top: 58.6%;
-  width: 7.6%;
-  height: 8.6%;
+.scene-b .log-book {
+  left: 83.4%;
+  top: 75.5%;
+  width: 10.5%;
+  height: 13.5%;
 }
 @keyframes targetPulse {
   from {
@@ -541,7 +568,7 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
 @media (max-width: 900px) {
   .game-layout, .cards-grid, .modal-grid { grid-template-columns: 1fr; }
   .nav { align-items: flex-start; gap: 16px; flex-direction: column; }
-  .scene-title { margin-bottom: -50px; }
+  .scene-toolbar { margin-bottom: -50px; }
   .issue-card {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(160px, auto);
