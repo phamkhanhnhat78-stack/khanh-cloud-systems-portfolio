@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cloud Café | AWS Troubleshooting Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body>
   <header class="hero">
@@ -45,36 +45,23 @@
         </aside>
 
         <section class="cafe-stage" aria-label="Interactive illustrated café scene">
-          <div class="scene-title" id="scene-title">Coffee Shop</div>
+          <div class="scene-toolbar">
+            <button id="previous-issue-button" class="scene-arrow" type="button" aria-label="Previous situation">‹</button>
+            <div class="scene-title" id="scene-title">Coffee Shop</div>
+            <button id="next-issue-button" class="scene-arrow" type="button" aria-label="Next situation">›</button>
+          </div>
           <div class="cafe-scene">
-            <div class="wall-art cafe-sign">MEOW<br>CAFE</div>
-            <div class="wall-art menu-board">MENU</div>
-            <div class="window"><span>OPEN</span></div>
-            <div class="sofa"></div>
-            <div class="plant plant-one"></div>
-            <div class="plant plant-two"></div>
-            <div class="shelf shelf-one"></div>
-            <div class="shelf shelf-two"></div>
-            <div class="counter"></div>
-            <div class="table table-one"></div>
-            <div class="table table-two"></div>
-
-            <div class="cat-customer seated-cat"><span class="cat-ear left"></span><span class="cat-ear right"></span><span class="cat-face">• •<br>ᴗ</span><span class="cat-tail"></span></div>
-            <div class="cat-customer counter-cat"><span class="cat-ear left"></span><span class="cat-ear right"></span><span class="cat-face">• •<br>︿</span><span class="cat-tail"></span></div>
-            <div class="stick-staff cashier-staff"><span class="head"></span><span class="body"></span><span class="arm arm-left"></span><span class="arm arm-right"></span><span class="leg leg-left"></span><span class="leg leg-right"></span></div>
-            <div class="stick-staff cleaner-staff"><span class="head"></span><span class="body"></span><span class="arm arm-left"></span><span class="arm arm-right"></span><span class="leg leg-left"></span><span class="leg leg-right"></span></div>
-            <div class="stick-staff delivery-staff"><span class="cap"></span><span class="head"></span><span class="body"></span><span class="arm arm-left"></span><span class="arm arm-right"></span><span class="leg leg-left"></span><span class="leg leg-right"></span></div>
-
-            <button class="doodle-object door-path" data-object="door-path" type="button"><span>broken entrance</span></button>
-            <button class="doodle-object open-sign" data-object="open-sign" type="button"><span class="sign-text">CLOSED</span></button>
-            <button class="doodle-object guard" data-object="guard" type="button"><span>guard</span></button>
-            <button class="doodle-object chair" data-object="chair" type="button"><span>chair</span></button>
-            <button class="doodle-object register" data-object="register" type="button"><span class="register-text">OFF</span></button>
-            <button class="doodle-object coffee-machine" data-object="coffee-machine" type="button"><span>coffee<br>machine</span></button>
-            <button class="doodle-object order-pile" data-object="order-pile" type="button"><span>orders</span></button>
-            <button class="doodle-object staff-pass" data-object="staff-pass" type="button"><span>SSM<br>PASS</span></button>
-            <button class="doodle-object storage-box" data-object="storage-box" type="button"><span>S3 ?</span></button>
-            <button class="doodle-object log-book" data-object="log-book" type="button"><span>log?</span></button>
+            <img id="scene-art" class="scene-art" src="assets/cloud-cafe-exterior.png" alt="Warm illustrated Cloud Café scene for the selected troubleshooting layer." />
+            <button class="cafe-object door-path" data-object="door-path" type="button" aria-label="Clear bricks blocking the entrance route"><span class="anomaly brick-block"></span><span class="hotspot-label">Missing route</span></button>
+            <button class="cafe-object open-sign" data-object="open-sign" type="button" aria-label="Correct hanging window sign"><span class="anomaly window-sign sign-text">CLOSED</span><span class="hotspot-label">Window sign</span></button>
+            <button class="cafe-object guard" data-object="guard" type="button" aria-label="Clear blocked customer queue"><span class="anomaly queue-block">QUEUE CLOSED</span><span class="hotspot-label">Queue blocked</span></button>
+            <button class="cafe-object chair" data-object="chair" type="button" aria-label="Restore cashier service health"><span class="anomaly service-down">DOWN</span><span class="hotspot-label">Service health</span></button>
+            <button class="cafe-object register" data-object="register" type="button" aria-label="Configure monitoring alarm"><span class="anomaly alarm-off register-text">OFF</span><span class="hotspot-label">Alarm</span></button>
+            <button class="cafe-object coffee-machine" data-object="coffee-machine" type="button" aria-label="Stop unauthorized storage access"><span class="anomaly mouse-alert">!</span><span class="hotspot-label">Stock theft</span></button>
+            <button class="cafe-object order-pile" data-object="order-pile" type="button" aria-label="Organize overflowing printed orders"><span class="anomaly order-printer">99+</span><span class="hotspot-label">Orders</span></button>
+            <button class="cafe-object staff-pass" data-object="staff-pass" type="button" aria-label="Encrypt customer orders"><span class="anomaly unlocked-orders pass-text">UNLOCKED</span><span class="hotspot-label">Encryption</span></button>
+            <button class="cafe-object storage-box" data-object="storage-box" type="button" aria-label="Label storage box"><span class="anomaly question-box">?</span><span class="hotspot-label">Storage box</span></button>
+            <button class="cafe-object log-book" data-object="log-book" type="button" aria-label="Enable log book"><span class="anomaly blank-log">NO LOGS</span><span class="hotspot-label">Log book</span></button>
           </div>
         </section>
       </div>
@@ -116,6 +103,6 @@
   </main>
 
   <footer class="footer"><p>Cloud Café: AWS Troubleshooting Portfolio</p><a href="https://github.com/phamkhanhnhat78-stack/cloud-cafe-aws-troubleshooting" target="_blank" rel="noreferrer">GitHub Repository</a></footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>
