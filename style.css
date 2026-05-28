@@ -753,6 +753,46 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
   }
 }
 
+.overview-section,
+.mapping-section {
+  background: var(--soft-paper);
+}
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 26px;
+}
+.mapping-table-wrap {
+  margin-top: 26px;
+  overflow-x: auto;
+  border: 3px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+.mapping-table {
+  width: 100%;
+  min-width: 780px;
+  border-collapse: collapse;
+  line-height: 1.45;
+}
+.mapping-table th,
+.mapping-table td {
+  padding: 15px 16px;
+  border-bottom: 2px solid #ead7b9;
+  text-align: left;
+  vertical-align: top;
+}
+.mapping-table th {
+  background: #f5eadb;
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.mapping-table tr:last-child td {
+  border-bottom: 0;
+}
 .cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 26px; }
 .info-card { padding: 22px; line-height: 1.55; }
 .workflow { margin-top: 24px; padding: 26px; line-height: 1.7; }
@@ -787,6 +827,21 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
 }
 .modal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 18px; }
 .modal-grid div { border: 2px dashed var(--line); border-radius: 8px; padding: 18px; background: white; }
+.modal-steps {
+  margin-top: 18px;
+  border: 2px dashed var(--line);
+  border-radius: 8px;
+  padding: 18px;
+  background: white;
+}
+.modal-steps ul {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+.modal-steps li + li {
+  margin-top: 6px;
+}
 .footer {
   border-top: 3px solid var(--line);
   padding: 28px 20px;
@@ -798,7 +853,7 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
 }
 
 @media (max-width: 900px) {
-  .game-layout, .cards-grid, .modal-grid { grid-template-columns: 1fr; }
+  .game-layout, .overview-grid, .cards-grid, .modal-grid { grid-template-columns: 1fr; }
   .nav { align-items: flex-start; gap: 16px; flex-direction: column; }
   .scene-toolbar { margin-bottom: -50px; }
   .issue-card {

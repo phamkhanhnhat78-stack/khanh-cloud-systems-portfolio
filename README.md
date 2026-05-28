@@ -1,8 +1,8 @@
 # Cloud Café: AWS Troubleshooting Portfolio
 
-Cloud Café is an interactive AWS troubleshooting portfolio project. It uses four clean illustrated coffee shop scenes to explain real cloud operations problems in a way that is easy for both recruiters and technical interviewers to understand.
+Cloud Café is an interactive AWS troubleshooting portfolio project. It uses four illustrated coffee shop scenes to explain real cloud operations problems in a way that is easy for both recruiters and technical interviewers to understand.
 
-Live website: GitHub Pages link will be available after Pages is enabled in repository settings.
+Live website: https://phamkhanhnhat78-stack.github.io/cloud-cafe-aws-troubleshooting/
 
 ## Project Purpose
 
@@ -18,6 +18,7 @@ A visitor receives one random issue at a time. After clicking the correct object
 1. What real-world café problem was fixed.
 2. What AWS problem it represents.
 3. Which AWS services are involved.
+4. Which troubleshooting checks should be performed.
 
 ## AWS Concepts Covered
 
@@ -25,16 +26,16 @@ The random scenarios map to these AWS topics:
 
 | Café Issue | AWS Equivalent | Services |
 |---|---|---|
-| Missing route to café | Missing public route to internet | VPC, Route Table, Internet Gateway |
-| Wrong shop sign | DNS or endpoint problem | Route 53, DNS, CloudFront / Load Balancer |
-| Delivery access denied | Private resource access blocked | IAM, Systems Manager Session Manager |
+| Bricks blocking the entrance route | Missing public route to internet | VPC, Route Table, Internet Gateway |
+| Hanging window sign says CLOSED | DNS or endpoint problem | Route 53, DNS, CloudFront / Load Balancer |
+| Queue barrier blocks a customer | Valid traffic blocked before app path | Security Groups, Network ACL, route rules |
 | Cashier service unhealthy | Backend target or app service unhealthy | ELB, Target Groups, EC2 |
+| Unlabeled storage box | Storage organization and access control | S3, IAM |
 | Mouse stealing stock | Storage access policy too open | S3 Bucket Policy, IAM, GuardDuty |
 | No stock records | Missing storage audit visibility | S3 logs, CloudTrail, CloudWatch Logs |
-| Too many orders | Need workload buffering | SQS |
 | Monitoring alarm not configured | Missing operational alerting | CloudWatch Alarm, SNS |
+| Printed orders piling up | Need workload buffering | SQS |
 | Order data is not encrypted | Protect sensitive stored and transmitted data | KMS, TLS, S3 encryption |
-| Unlabeled storage box | Storage organization and access control | S3, IAM |
 
 ## Website Features
 
@@ -44,8 +45,8 @@ The random scenarios map to these AWS topics:
 - Four distinct interaction contexts: street storefront, café floor, warehouse storage, and manager office operations/security
 - Ten random issues represented by intentionally inconsistent anomaly objects across the four scenes
 - Previous/next scene controls so visitors can browse the situations directly
-- Pop-up explanation after the visitor fixes an issue
-- HR-friendly explanation and technical AWS mapping
+- Pop-up explanation after the visitor fixes an issue, including troubleshooting checks
+- HR-friendly overview and technical AWS mapping table
 - AWS documentation section
 - Troubleshooting notes section
 - GitHub Pages deployment ready
@@ -62,7 +63,8 @@ cloud-cafe-aws-troubleshooting/
 │   ├── cloud-cafe-exterior.png
 │   ├── cloud-cafe-floor.png
 │   ├── cloud-cafe-storage.png
-│   └── cloud-cafe-office.png
+│   ├── cloud-cafe-office.png
+│   └── cloud-cafe-brick-block.png
 ├── README.md
 └── docs/
     └── troubleshooting-notes.md
@@ -89,7 +91,7 @@ This website is designed to connect with a real AWS cloud operations project:
 Cloud Café: AWS Troubleshooting Portfolio | HTML, CSS, JavaScript, GitHub Pages, AWS VPC, EC2, IAM, SSM, CloudWatch, SNS
 
 - Built an interactive cloud troubleshooting portfolio website that maps coffee shop operational issues to AWS infrastructure problems.
-- Created random front-end scenarios explaining route table issues, DNS endpoint errors, private access denial, unhealthy backend targets, workload buffering, S3 organization, storage auditing, monitoring alarms, and encryption.
+- Created random front-end scenarios explaining route table issues, DNS endpoint errors, traffic blocking, unhealthy backend targets, workload buffering, S3 organization, storage auditing, monitoring alarms, and encryption.
 - Designed the portfolio to support a secure AWS operations project using VPC, private EC2, IAM roles, Systems Manager Session Manager, CloudWatch alarms, and SNS notifications.
 - Published the project through GitHub Pages with documentation and troubleshooting notes.
 
