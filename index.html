@@ -4,14 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cloud Café | AWS Troubleshooting Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=7" />
+  <link rel="stylesheet" href="style.css?v=8" />
 </head>
 <body>
   <header class="hero">
     <nav class="nav">
       <div class="brand">Cloud Café</div>
       <div class="nav-links">
+        <a href="#overview">Overview</a>
         <a href="#game">Play</a>
+        <a href="#mapping">AWS Mapping</a>
         <a href="#documentation">AWS Documentation</a>
         <a href="#troubleshooting">Troubleshooting</a>
       </div>
@@ -28,6 +30,19 @@
   </header>
 
   <main>
+    <section id="overview" class="section overview-section">
+      <div class="section-heading">
+        <p class="eyebrow">Project overview</p>
+        <h2>AWS troubleshooting, explained through a café simulation</h2>
+        <p>This portfolio project turns common cloud support problems into visible café incidents. Each scene maps a customer-facing problem to an AWS concept, then shows the real troubleshooting checks behind the fix.</p>
+      </div>
+      <div class="overview-grid">
+        <article class="info-card"><h3>Built with</h3><p>Static HTML, CSS, and JavaScript. No framework or build step, so it is GitHub Pages friendly.</p></article>
+        <article class="info-card"><h3>AWS scope</h3><p>VPC routing, DNS, Security Groups, NACLs, ELB health checks, S3 governance, CloudWatch, SNS, SQS, and KMS.</p></article>
+        <article class="info-card"><h3>Support mindset</h3><p>Each issue links a visible symptom to likely checks, affected services, and a practical cloud operations response.</p></article>
+      </div>
+    </section>
+
     <section id="game" class="section game-section">
       <div class="section-heading">
         <p class="eyebrow">One issue per visit</p>
@@ -77,9 +92,31 @@
           <div><h3>AWS equivalent</h3><p id="modal-cloud"></p></div>
           <div><h3>AWS services</h3><p id="modal-services"></p></div>
         </div>
+        <div class="modal-steps"><h3>Troubleshooting checks</h3><ul id="modal-steps"></ul></div>
         <div class="modal-actions"><button id="modal-new-issue" class="button primary" type="button">Try Another Issue</button><a class="button secondary" href="#documentation">View AWS Documentation</a></div>
       </div>
     </div>
+
+    <section id="mapping" class="section mapping-section">
+      <div class="section-heading"><p class="eyebrow">AWS mapping</p><h2>From café symptom to cloud service</h2><p>This table is the technical index behind the game. It shows how each visual problem maps to a real AWS troubleshooting area.</p></div>
+      <div class="mapping-table-wrap">
+        <table class="mapping-table">
+          <thead><tr><th>Café incident</th><th>AWS concept</th><th>Primary checks</th></tr></thead>
+          <tbody>
+            <tr><td>Bricks block the entrance route</td><td>VPC route table / Internet Gateway</td><td>Route table, subnet association, IGW attachment</td></tr>
+            <tr><td>Window sign says CLOSED</td><td>DNS or public endpoint mismatch</td><td>Route 53 record, load balancer or CloudFront DNS, target endpoint</td></tr>
+            <tr><td>Queue barrier blocks a customer</td><td>Security Group / NACL path blocking</td><td>Inbound rule, NACL allow/deny order, route path</td></tr>
+            <tr><td>Cashier terminal shows DOWN</td><td>Unhealthy backend target</td><td>Target group health, EC2 status, app process and port</td></tr>
+            <tr><td>Storage box has no label</td><td>S3 object organization</td><td>Bucket naming, prefixes, tags, IAM boundaries</td></tr>
+            <tr><td>Mouse steals stock</td><td>Storage policy too open</td><td>S3 bucket policy, IAM access, GuardDuty or Access Analyzer findings</td></tr>
+            <tr><td>No stock records</td><td>Missing audit logs</td><td>CloudTrail data events, S3 access logs, CloudWatch Logs</td></tr>
+            <tr><td>Alarm is OFF</td><td>Monitoring not configured</td><td>CloudWatch alarm, metric threshold, SNS action and subscription</td></tr>
+            <tr><td>Orders print faster than staff can process</td><td>Workload buffering</td><td>SQS queue, producer/consumer rate, retry handling</td></tr>
+            <tr><td>Order folder is unlocked</td><td>Encryption and data protection</td><td>KMS key, TLS, encrypted storage, secret handling</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <section id="documentation" class="section docs-section">
       <div class="section-heading"><p class="eyebrow">Technical documentation</p><h2>Real AWS Project Behind the Game</h2><p>The game explains the same skills used in a secure AWS operations project: private EC2 access, VPC networking, monitoring, alerting, and incident-response thinking.</p></div>
@@ -103,6 +140,6 @@
   </main>
 
   <footer class="footer"><p>Cloud Café: AWS Troubleshooting Portfolio</p><a href="https://github.com/phamkhanhnhat78-stack/cloud-cafe-aws-troubleshooting" target="_blank" rel="noreferrer">GitHub Repository</a></footer>
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>
