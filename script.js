@@ -69,7 +69,8 @@ function resetText() {
   if (staffPass) staffPass.querySelector(".pass-text").textContent = "UNLOCKED";
 }
 
-function renderIssue(issue) {
+function renderIssue(issue, options = {}) {
+  const shouldCenterActiveObject = options.centerActiveObject === true;
   currentIssue = issue;
   currentIssueIndex = issues.findIndex((item) => item.id === issue.id);
   const scene = scenes[issue.sceneKey];
@@ -92,7 +93,7 @@ function renderIssue(issue) {
       activeObject = item;
     }
   });
-  if (activeObject) {
+  if (activeObject && shouldCenterActiveObject) {
     const centerActiveObject = () => {
       activeObject.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
       const rect = activeObject.getBoundingClientRect();
@@ -108,12 +109,12 @@ function renderIssue(issue) {
 
 function pickRandomIssue() {
   const issue = issues[Math.floor(Math.random() * issues.length)];
-  renderIssue(issue);
+  renderIssue(issue, { centerActiveObject: true });
 }
 
 function moveIssue(direction) {
   const nextIndex = (currentIssueIndex + direction + issues.length) % issues.length;
-  renderIssue(issues[nextIndex]);
+  renderIssue(issues[nextIndex], { centerActiveObject: true });
 }
 
 function pickInitialIssue() {
@@ -171,7 +172,7 @@ modal.addEventListener("click", (event) => {
 window.cloudCafePreviewIssue = (id) => {
   const issue = issues.find((item) => item.id === id);
   if (!issue) return false;
-  renderIssue(issue);
+  renderIssue(issue, { centerActiveObject: true });
   return true;
 };
 

@@ -1,10 +1,17 @@
-# Cloud Café: AWS Troubleshooting Portfolio
+# KHANHNHAT PHAM Cloud Support Portfolio
 
-Cloud Café is an interactive AWS troubleshooting portfolio project. It uses four illustrated coffee shop scenes to explain real cloud operations problems in a way that is easy for both recruiters and technical interviewers to understand.
+This repository is being repositioned from a standalone Cloud Café project into an integrated cloud support portfolio. It combines the Cloud Café AWS troubleshooting game with the KHANHNHAT PHAM Portfolio Website, so recruiters can review the interactive project, AWS support thinking, documentation, and GitHub Pages delivery from one place.
 
 Live website: https://phamkhanhnhat78-stack.github.io/cloud-cafe-aws-troubleshooting/
 
 ## Project Purpose
+
+The portfolio has two connected parts:
+
+- Cloud Café: an interactive AWS troubleshooting project.
+- KHANHNHAT PHAM Portfolio Website: the personal project showcase and professional wrapper.
+
+The homepage is structured like a professional personal website: a profile hero with a workplace image area, professional titles, skills, workplace experience, workplace skills, achievements, responsibility mapping, and certificate attachment slots.
 
 Many cloud issues are difficult to explain with only screenshots or service names. This project uses a coffee shop as a visual metaphor:
 
@@ -40,6 +47,11 @@ The random scenarios map to these AWS topics:
 ## Website Features
 
 - One-page portfolio website
+- Personal profile hero with professional title positioning
+- Skills, workplace experience, workplace skills, and career wins sections
+- Company-style responsibility map explaining CEO / COO / CFO / CTO thinking
+- Certificate attachment slots for official proof and exam evidence
+- Integrated project showcase for Cloud Café and the personal portfolio website
 - Random troubleshooting scenario on page load
 - Clean café illustrations with visually distinct cats, stick-figure staff, and clickable troubleshooting props
 - Four distinct interaction contexts: street storefront, café floor, warehouse storage, and manager office operations/security
@@ -88,9 +100,9 @@ This website is designed to connect with a real AWS cloud operations project:
 
 ## Resume Description
 
-Cloud Café: AWS Troubleshooting Portfolio | HTML, CSS, JavaScript, GitHub Pages, AWS VPC, EC2, IAM, SSM, CloudWatch, SNS
+KHANHNHAT PHAM Cloud Support Portfolio | HTML, CSS, JavaScript, GitHub Pages, AWS VPC, EC2, IAM, SSM, CloudWatch, SNS
 
-- Built an interactive cloud troubleshooting portfolio website that maps coffee shop operational issues to AWS infrastructure problems.
+- Integrated a personal portfolio website direction with an interactive cloud troubleshooting project for a clearer job-ready portfolio.
 - Created random front-end scenarios explaining route table issues, DNS endpoint errors, traffic blocking, unhealthy backend targets, workload buffering, S3 organization, storage auditing, monitoring alarms, and encryption.
 - Designed the portfolio to support a secure AWS operations project using VPC, private EC2, IAM roles, Systems Manager Session Manager, CloudWatch alarms, and SNS notifications.
 - Published the project through GitHub Pages with documentation and troubleshooting notes.
