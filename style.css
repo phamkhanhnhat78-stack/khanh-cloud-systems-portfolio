@@ -25,15 +25,25 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--ink);
   background: var(--paper);
+  overflow-x: clip;
 }
 button, a { font: inherit; }
 .nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: min(1180px, 100%);
+  z-index: 40;
   max-width: 1180px;
   margin: 0 auto;
   padding: 22px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: rgba(251, 247, 239, .96);
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid var(--line);
+  transform: translateX(-50%);
 }
 .brand { font-weight: 800; font-size: 1.25rem; }
 .nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
@@ -44,6 +54,7 @@ button, a { font: inherit; }
 }
 .hero {
   min-height: 620px;
+  padding-top: 92px;
   background: linear-gradient(180deg, #fffdf8, #f5eadb);
   border-bottom: 3px solid var(--line);
 }
@@ -144,7 +155,6 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
 .button:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 rgba(0, 0, 0, .17); }
 .primary { background: var(--ink); color: white; }
 .secondary { background: white; color: var(--ink); }
-
 .game-layout {
   display: grid;
   grid-template-columns: minmax(260px, 340px) 1fr;
@@ -806,7 +816,6 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
   }
 }
 
-.overview-section,
 .mapping-section {
   background: var(--soft-paper);
 }
@@ -816,40 +825,74 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
   gap: 18px;
   margin-top: 26px;
 }
-.profile-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-top: 26px;
-}
-.role-section {
-  background: #fffdf8;
-}
-.role-grid,
-.certificate-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-top: 26px;
-}
-.certificate-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.role-card,
-.certificate-card {
-  padding: 22px;
+.resume-profile-section {
   background: var(--soft-paper);
+}
+.skills-section,
+.certificates-section {
+  background: #eef5f7;
+}
+.experience-section {
+  background: #f5eadb;
+}
+.resume-profile-grid,
+.skills-layout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+.resume-profile-card,
+.skill-panel {
+  padding: 24px;
   border: 3px solid var(--line);
   border-radius: 8px;
+  background: white;
   box-shadow: var(--shadow);
   line-height: 1.55;
 }
-.role-card h3,
-.certificate-card h3 {
-  min-height: 58px;
+.resume-profile-card h3,
+.skill-panel h3 {
+  font-size: 1.45rem;
 }
-.certificates-section {
-  background: #f5eadb;
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.skill-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 6px 11px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: #fffdf8;
+  font-weight: 800;
+}
+.timeline-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 26px;
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 22px;
+  padding: 22px;
+  border: 3px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+.timeline-item span {
+  font-weight: 900;
+  color: var(--accent-dark);
+}
+.timeline-item p {
+  margin-bottom: 0;
+  line-height: 1.55;
 }
 .projects-section {
   background: #f3efe8;
@@ -982,9 +1025,8 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
   .profile-hero,
   .game-layout,
   .overview-grid,
-  .profile-grid,
-  .role-grid,
-  .certificate-grid,
+  .resume-profile-grid,
+  .skills-layout,
   .project-list,
   .cards-grid,
   .modal-grid { grid-template-columns: 1fr; }
@@ -1018,8 +1060,10 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
   h1 { font-size: clamp(3rem, 18vw, 4.6rem); }
   .profile-hero { gap: 28px; }
   .portrait-frame { min-height: 360px; }
-  .portrait-head { width: 86px; height: 104px; }
-  .portrait-body { width: 220px; }
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
   .cafe-stage { overflow-x: auto; }
   .cards-grid { grid-template-columns: 1fr; }
   .issue-card { padding: 16px; }
