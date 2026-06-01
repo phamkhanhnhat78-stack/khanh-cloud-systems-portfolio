@@ -1,17 +1,17 @@
-# KHANHNHAT PHAM Cloud Support Portfolio
+# AWS Cloud Support Portfolio
 
-This repository is being repositioned from a standalone Cloud Café project into an integrated cloud support portfolio. It combines the Cloud Café AWS troubleshooting game with the KHANHNHAT PHAM Portfolio Website, so recruiters can review the interactive project, AWS support thinking, documentation, and GitHub Pages delivery from one place.
+This is a static HTML, CSS, and JavaScript portfolio website for KHANHNHAT PHAM. It presents AWS cloud support skills through an interactive troubleshooting game called Cloud Café, technical documentation, and project-based AWS operations scenarios.
 
-Live website: https://phamkhanhnhat78-stack.github.io/cloud-cafe-aws-troubleshooting/
+Live website: https://phamkhanhnhat78-stack.github.io/aws-cloud-support-portfolio/
 
 ## Project Purpose
 
 The portfolio has two connected parts:
 
-- Cloud Café: an interactive AWS troubleshooting project.
-- KHANHNHAT PHAM Portfolio Website: the personal project showcase and professional wrapper.
+- Cloud Café: AWS Troubleshooting Game.
+- AWS Cloud Support Portfolio: the personal project showcase and professional wrapper.
 
-The homepage is structured like a professional personal website: a profile hero with a workplace image area, professional titles, skills, workplace experience, workplace skills, achievements, responsibility mapping, and certificate attachment slots.
+The homepage is structured like a professional personal website: a profile hero with a workplace image area, professional titles, resume profile, skills, working experience, certificates, projects, and the interactive Cloud Café game.
 
 Many cloud issues are difficult to explain with only screenshots or service names. This project uses a coffee shop as a visual metaphor:
 
@@ -49,9 +49,8 @@ The random scenarios map to these AWS topics:
 - One-page portfolio website
 - Personal profile hero with professional title positioning
 - Skills, workplace experience, workplace skills, and career wins sections
-- Company-style responsibility map explaining CEO / COO / CFO / CTO thinking
 - Certificate attachment slots for official proof and exam evidence
-- Integrated project showcase for Cloud Café and the personal portfolio website
+- Integrated project showcase for Cloud Café: AWS Troubleshooting Game and the personal AWS cloud support portfolio
 - Random troubleshooting scenario on page load
 - Clean café illustrations with visually distinct cats, stick-figure staff, and clickable troubleshooting props
 - Four distinct interaction contexts: street storefront, café floor, warehouse storage, and manager office operations/security
@@ -66,7 +65,7 @@ The random scenarios map to these AWS topics:
 ## File Structure
 
 ```text
-cloud-cafe-aws-troubleshooting/
+aws-cloud-support-portfolio/
 ├── index.html
 ├── style.css
 ├── script.js
@@ -100,9 +99,9 @@ This website is designed to connect with a real AWS cloud operations project:
 
 ## Resume Description
 
-KHANHNHAT PHAM Cloud Support Portfolio | HTML, CSS, JavaScript, GitHub Pages, AWS VPC, EC2, IAM, SSM, CloudWatch, SNS
+AWS Cloud Support Portfolio | HTML, CSS, JavaScript, GitHub Pages, AWS VPC, EC2, IAM, SSM, CloudWatch, SNS, S3, Route 53, SQS, KMS
 
-- Integrated a personal portfolio website direction with an interactive cloud troubleshooting project for a clearer job-ready portfolio.
+- Built a professional AWS cloud support portfolio that integrates an interactive troubleshooting game, technical documentation, and static website deployment practice.
 - Created random front-end scenarios explaining route table issues, DNS endpoint errors, traffic blocking, unhealthy backend targets, workload buffering, S3 organization, storage auditing, monitoring alarms, and encryption.
 - Designed the portfolio to support a secure AWS operations project using VPC, private EC2, IAM roles, Systems Manager Session Manager, CloudWatch alarms, and SNS notifications.
 - Published the project through GitHub Pages with documentation and troubleshooting notes.
