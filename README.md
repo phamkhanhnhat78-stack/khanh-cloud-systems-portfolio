@@ -13,7 +13,7 @@ The Cloud Cafe AWS troubleshooting lab remains part of the Support Game page, bu
 
 LinkedIn: https://www.linkedin.com/in/khanhnhat-pham/
 
-Current local copy still points to the older GitHub remote until the repository is renamed or a new repository is created.
+Repository: https://github.com/phamkhanhnhat78-stack/khanh-cloud-systems-portfolio
 
 ## Positioning
 
@@ -85,7 +85,7 @@ Interactive case-study page containing:
 ## File Structure
 
 ```text
-technical-it-support-portfolio/
+khanh-cloud-systems-portfolio/
 ├── index.html
 ├── style.css
 ├── script.js
@@ -103,15 +103,11 @@ technical-it-support-portfolio/
     └── troubleshooting-notes.md
 ```
 
-## Repository Rename Plan
+## Repository Name
 
-The old names can stay visible for now after being renamed or archived:
+The portfolio repository is now named `khanh-cloud-systems-portfolio`.
 
-- `cloud-cafe-aws-troubleshooting`: keep as the older Cloud Cafe case-study source, or rename to `cloud-cafe-troubleshooting-lab`.
-- `phamkhanhnhat78-stack.github.io`: keep as the old GitHub Pages portfolio source, or rename only after confirming the new portfolio deployment.
-- New merged portfolio suggestion: `technical-it-support-portfolio` or `khanh-cloud-systems-portfolio`.
-
-Do not delete the old repositories until the new GitHub Pages deployment and links are confirmed.
+This name matches the current positioning better than the older `cloud-cafe-aws-troubleshooting` name because the site is now a full IT and cloud systems portfolio, not only an AWS troubleshooting game.
 
 ## Resume Description
 
