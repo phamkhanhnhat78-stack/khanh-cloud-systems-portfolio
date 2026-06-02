@@ -53,8 +53,36 @@ const modalReal = document.getElementById("modal-real");
 const modalCloud = document.getElementById("modal-cloud");
 const modalServices = document.getElementById("modal-services");
 const modalSteps = document.getElementById("modal-steps");
+const pageLinks = Array.from(document.querySelectorAll("[data-page-link]"));
+const pageSections = Array.from(document.querySelectorAll("[data-page-section]"));
 let currentIssue = null;
 let currentIssueIndex = 0;
+
+function showPage(pageName, options = {}) {
+  const page = pageName || "about";
+  pageSections.forEach((section) => {
+    section.classList.toggle("active-page", section.dataset.pageSection === page);
+  });
+  pageLinks.forEach((link) => {
+    link.classList.toggle("active-nav", link.dataset.pageLink === page);
+  });
+  if (options.updateHash !== false && window.location.hash !== "#" + page) {
+    history.pushState(null, "", "#" + page);
+  }
+  if (options.scroll !== false) {
+    window.scrollTo({ top: 0, behavior: options.instant ? "auto" : "smooth" });
+  }
+}
+
+function pageFromHash() {
+  const hash = window.location.hash.replace("#", "");
+  if (["about", "work", "skills", "game"].includes(hash)) return hash;
+  if (["profile", "contact"].includes(hash)) return "about";
+  if (["resume"].includes(hash)) return "work";
+  if (["experience", "certificates"].includes(hash)) return "skills";
+  if (["projects", "mapping", "documentation", "troubleshooting"].includes(hash)) return "game";
+  return "about";
+}
 
 function objectById(id) {
   return clickableObjects.find((item) => item.dataset.object === id);
@@ -169,11 +197,24 @@ modal.addEventListener("click", (event) => {
   if (event.target === modal) modal.classList.add("hidden");
 });
 
+pageLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    showPage(link.dataset.pageLink);
+  });
+});
+
+window.addEventListener("hashchange", () => {
+  showPage(pageFromHash(), { updateHash: false });
+});
+
 window.cloudCafePreviewIssue = (id) => {
   const issue = issues.find((item) => item.id === id);
   if (!issue) return false;
+  showPage("game", { scroll: false });
   renderIssue(issue, { centerActiveObject: true });
   return true;
 };
 
+showPage(pageFromHash(), { updateHash: false, instant: true });
 pickInitialIssue();
