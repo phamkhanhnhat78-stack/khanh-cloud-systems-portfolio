@@ -3,286 +3,181 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khanh Pham | Technical & IT Support Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=14" />
+  <title>CloudOps Incident Lab</title>
+  <link rel="stylesheet" href="style.css?v=1" />
 </head>
 <body>
-  <header class="hero">
-    <nav class="nav">
-      <div class="brand">Khanh Pham</div>
-      <div class="nav-links">
-        <a href="#about" data-page-link="about">About Me</a>
-        <a href="#work" data-page-link="work">Work Resume</a>
-        <a href="#skills" data-page-link="skills">Skills</a>
-        <a href="#game" data-page-link="game">Support Game</a>
-      </div>
+  <header class="topbar">
+    <a class="brand" href="#overview" aria-label="CloudOps Incident Lab home">
+      <span class="brand-mark">CL</span>
+      <span>CloudOps Incident Lab</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#overview">Overview</a>
+      <a href="#console">Incident Console</a>
+      <a href="#runbook">Runbook</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#evidence">Evidence</a>
     </nav>
-    <section id="profile" class="hero-content profile-hero page-section active-page" data-page-section="about">
-      <div class="portrait-panel" aria-label="Professional workplace portrait placeholder">
-        <div class="portrait-frame">
-          <img class="portrait-photo" src="assets/nhat-pham-portrait-office.png" alt="KHANHNHAT PHAM professional portrait in a white dress shirt." />
-        </div>
-        <p>IT & Cloud Systems Engineering Portfolio</p>
-      </div>
-      <div class="profile-copy">
-        <p class="eyebrow">About Me</p>
-        <h1>KhanhNhat Pham</h1>
-        <h2 class="hero-role">IT & Cloud Systems Engineer · Operations Infrastructure Specialist</h2>
-        <p class="hero-motto">Built from operations. Moving toward cloud architecture.</p>
-        <div class="about-story" aria-label="Professional story">
-          <p>KhanhNhat Pham focuses on IT systems, cloud infrastructure, and the operational logic behind reliable support environments. His work direction connects technical troubleshooting, cloud architecture study, and infrastructure-minded problem solving.</p>
-          <p>Before entering digital infrastructure, he built a strong foundation in physical operations and logistics. Across Charlie's Produce and HungryPanda, he worked in high-pressure inventory control, warehouse workflow, route coordination, and supply-chain support, developing a practical sense for system stability and resource allocation.</p>
-          <p>He is now advancing that operations background through structured IT and cloud training at Per Scholas. His current technical track includes operating systems, computer hardware fundamentals, Linux, Python, networking, AWS architecture concepts, and preparation for AWS Certified Solutions Architect - Associate (SAA-C03).</p>
-          <p>With multilingual communication strengths and cross-functional experience, he aims to bridge business operations and technical teams. His belief is simple: reliable systems are built by people who understand both the infrastructure and the users depending on it.</p>
-        </div>
-        <div class="about-signal" aria-label="Animated infrastructure signal">
-          <span></span><span></span><span></span><span></span>
-        </div>
-        <div class="hero-actions">
-          <a class="button primary" href="mailto:phamkhanhnhat78@gmail.com">Email</a>
-          <a class="button secondary" href="https://www.linkedin.com/in/khanhnhat-pham/" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-      </div>
-    </section>
   </header>
 
   <main>
-    <section id="resume" class="section resume-profile-section page-section" data-page-section="work">
-      <div class="section-heading">
-        <p class="eyebrow">Experience</p>
-        <h2>Professional Experience</h2>
-        <p>Operations roles that built the accuracy, ownership, communication, and cross-functional problem-solving needed for technical support.</p>
+    <section id="overview" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Operations-to-cloud project</p>
+        <h1>Diagnose cloud incidents like an operations engineer.</h1>
+        <p class="hero-text">CloudOps Incident Lab is a static troubleshooting simulator for entry-level cloud and IT support practice. It turns familiar operations problems into cloud diagnostics: user impact, affected layer, probable cause, and first checks.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#console">Open Incident Console</a>
+          <a class="button secondary" href="#runbook">Read Runbook</a>
+        </div>
       </div>
-      <div class="resume-experience-list">
-        <article class="resume-experience-item">
-          <div class="company-mark company-mark-produce">CP</div>
-          <div class="resume-experience-body">
-            <h3>Inventory Control Specialist</h3>
-            <p class="experience-meta">Charlie's Produce · Full-time</p>
-            <p class="experience-meta">Dec 2021 - Dec 2025 · Greater Seattle Area · On-site</p>
-            <p>Maintained inventory and material records across multiple systems through daily reconciliations, data corrections, and documentation updates for 2,000+ SKUs across two warehouse buildings.</p>
-            <div class="experience-skills"><span>Inventory Analysis</span><span>Inventory Accuracy</span><span>Data Reconciliation</span></div>
-          </div>
-        </article>
-
-        <article class="resume-experience-item">
-          <div class="company-mark company-mark-panda">HP</div>
-          <div class="resume-experience-body">
-            <h3>Warehouse Lead</h3>
-            <p class="experience-meta">HungryPanda Ltd · Full-time</p>
-            <p class="experience-meta">Jan 2020 - Dec 2021 · Greater Seattle Area · On-site</p>
-            <p>Collaborated with warehouse staff to improve daily workflow, organized vendor and customer invoices for finance review, and supported high-volume delivery route planning using QuickBooks.</p>
-            <div class="experience-skills"><span>Warehouse Operations</span><span>Workflow Coordination</span><span>Invoice Support</span></div>
-          </div>
-        </article>
-
-        <article class="resume-experience-item">
-          <div class="company-mark company-mark-weee">W</div>
-          <div class="resume-experience-body">
-            <h3>Logistics Lead</h3>
-            <p class="experience-meta">Weee! · Full-time</p>
-            <p class="experience-meta">Dec 2019 - Dec 2020 · Greater Seattle Area · On-site</p>
-            <p>Coordinated delivery operations, driver schedules, route priorities, performance tracking, and issue resolution for address discrepancies, missing items, failed deliveries, and operational delays.</p>
-            <div class="experience-skills"><span>Logistics Coordination</span><span>Delivery Operations</span><span>Issue Resolution</span></div>
-          </div>
-        </article>
-      </div>
+      <aside class="system-card" aria-label="System status summary">
+        <div class="status-header">
+          <span class="status-dot"></span>
+          <span>Live simulation</span>
+        </div>
+        <dl>
+          <div><dt>Scope</dt><dd>AWS support fundamentals</dd></div>
+          <div><dt>Focus</dt><dd>Networking, access, monitoring, storage</dd></div>
+          <div><dt>Output</dt><dd>Runbook-style checks</dd></div>
+        </dl>
+      </aside>
     </section>
 
-    <section id="skills" class="section skills-section page-section" data-page-section="skills">
+    <section id="console" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Capabilities</p>
-        <h2>Support Capabilities</h2>
-        <p>A practical mix of support workflows, technical tools, and workplace habits.</p>
-      </div>
-      <div class="skills-layout">
-        <article class="skill-panel">
-          <h3>Support Skills</h3>
-          <div class="skill-tags"><span>Troubleshooting</span><span>Ticket Thinking</span><span>User Support</span><span>Documentation</span><span>Incident Notes</span><span>Evidence Capture</span><span>Root Cause Thinking</span><span>Escalation Awareness</span><span>Inventory Control</span><span>Invoice Verification</span><span>Operational Reporting</span></div>
-        </article>
-        <article class="skill-panel">
-          <h3>Technical Tools</h3>
-          <div class="skill-tags"><span>Windows</span><span>Linux</span><span>macOS</span><span>Microsoft Office</span><span>QuickBooks</span><span>Google Suite</span><span>AWS Console</span><span>EC2</span><span>Lambda</span><span>Systems Manager</span><span>CloudWatch</span><span>S3</span><span>DNS</span><span>GitHub Pages</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-        </article>
-        <article class="skill-panel">
-          <h3>Workplace Skills</h3>
-          <div class="skill-tags"><span>Problem-solving</span><span>Documentation</span><span>Risk Awareness</span><span>Communication</span><span>Critical Thinking</span><span>Support Mindset</span><span>Attention to Detail</span><span>Teamwork</span><span>Time Management</span><span>Cross-functional Collaboration</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="experience" class="section experience-section page-section" data-page-section="skills">
-      <div class="section-heading">
-        <p class="eyebrow">Readiness</p>
-        <h2>Technical Support Readiness</h2>
-      </div>
-      <div class="timeline-list">
-        <article class="timeline-item"><span>Training</span><div><h3>Per Scholas AWS re/Start</h3><p>Building foundations in Linux, Python, networking, databases, EC2, Lambda, Systems Manager, monitoring, and cloud support workflows.</p></div></article>
-        <article class="timeline-item"><span>Portfolio</span><div><h3>Cloud Cafe: AWS Troubleshooting Lab</h3><p>Built an interactive support project that maps visible service symptoms to AWS checks, user impact, and support actions for networking, monitoring, storage, security, and workload buffering scenarios.</p></div></article>
-        <article class="timeline-item"><span>Practice</span><div><h3>Documentation and Evidence Building</h3><p>Translates operational issues into clear troubleshooting notes, technical mappings, and project evidence that recruiters can review quickly.</p></div></article>
-      </div>
-    </section>
-
-    <section id="certificates" class="section certificates-section page-section" data-page-section="skills">
-      <div class="section-heading">
-        <p class="eyebrow">Credentials</p>
-        <h2>Training and Credentials</h2>
-        <p>Current training and evidence areas connected to cloud and IT support readiness.</p>
-      </div>
-      <div class="credentials-list">
-        <article class="credential-item">
-          <h3>Per Scholas AWS re/Start</h3>
-          <p>Full-time training focused on cloud fundamentals, Linux, Python, networking, databases, monitoring, and AWS services.</p>
-        </article>
-        <article class="credential-item">
-          <h3>AWS Cloud Practitioner Preparation</h3>
-          <p>Portfolio evidence area for exam preparation, practice results, and future certification proof.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="projects" class="section projects-section page-section" data-page-section="game">
-      <div class="section-heading">
-        <p class="eyebrow">Case Studies</p>
-        <h2>Selected Work</h2>
-        <p>Project evidence that shows troubleshooting, documentation, deployment practice, and support communication.</p>
-      </div>
-      <div class="project-list">
-        <article class="project-card">
-          <div>
-            <p class="label">Interactive support case study</p>
-            <h3>Cloud Café: AWS Troubleshooting Lab</h3>
-            <p>A browser-based support simulation where visitors fix visible café issues and learn the matching AWS problem, affected services, user impact, and troubleshooting checks.</p>
-          </div>
-          <div class="project-meta">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>AWS concepts</span>
-          </div>
-          <a class="button secondary" href="https://github.com/phamkhanhnhat78-stack/khanh-cloud-systems-portfolio" target="_blank" rel="noreferrer">View Source Repository</a>
-        </article>
-        <article class="project-card">
-          <div>
-            <p class="label">Portfolio system</p>
-            <h3>Technical & IT Support Portfolio</h3>
-            <p>A personal portfolio for presenting professional experience, support capabilities, documentation, deployment practice, and troubleshooting evidence.</p>
-          </div>
-          <div class="project-meta">
-            <span>Portfolio</span><span>GitHub Pages</span><span>Project showcase</span>
-          </div>
-          <a class="button secondary" href="https://github.com/phamkhanhnhat78-stack" target="_blank" rel="noreferrer">View GitHub Profile</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="game" class="section game-section page-section" data-page-section="game">
-      <div class="section-heading">
-        <p class="eyebrow">Support Lab</p>
-        <h2>Cloud Café Troubleshooting Lab</h2>
-        <p>An interactive support simulation. Select the highlighted issue to see the user impact, AWS equivalent, affected services, and troubleshooting checks.</p>
+        <p class="eyebrow">Incident Console</p>
+        <h2>Choose an active incident.</h2>
+        <p>Each incident shows the user impact, infrastructure layer, likely root cause, and first response checklist.</p>
       </div>
 
-      <div class="game-layout">
-        <aside class="issue-card">
-          <p class="label">Current issue</p>
-          <h3 id="issue-title">Loading issue...</h3>
-          <p id="issue-instruction">Click the highlighted object in the café.</p>
-          <div class="status-box"><span id="status-dot" class="status-dot"></span><span id="status-text">Waiting for fix</span></div>
-          <button id="new-issue-button" class="button secondary" type="button">Try Another Issue</button>
+      <div class="console-layout">
+        <aside class="incident-list" aria-label="Incident list">
+          <button class="incident-tab active" data-incident="public-route" type="button">
+            <span>INC-001</span>
+            Public app unreachable
+          </button>
+          <button class="incident-tab" data-incident="dns-endpoint" type="button">
+            <span>INC-002</span>
+            Wrong public endpoint
+          </button>
+          <button class="incident-tab" data-incident="backend-health" type="button">
+            <span>INC-003</span>
+            Backend target unhealthy
+          </button>
+          <button class="incident-tab" data-incident="storage-access" type="button">
+            <span>INC-004</span>
+            Storage access risk
+          </button>
+          <button class="incident-tab" data-incident="monitoring-gap" type="button">
+            <span>INC-005</span>
+            Alerting gap
+          </button>
         </aside>
 
-        <section class="cafe-stage" aria-label="Interactive illustrated café scene">
-          <div class="scene-toolbar">
-            <button id="previous-issue-button" class="scene-arrow" type="button" aria-label="Previous situation">‹</button>
-            <div class="scene-title" id="scene-title">Coffee Shop</div>
-            <button id="next-issue-button" class="scene-arrow" type="button" aria-label="Next situation">›</button>
+        <article class="incident-panel" aria-live="polite">
+          <div class="incident-meta">
+            <span id="incident-severity">Severity 2</span>
+            <span id="incident-layer">Network layer</span>
           </div>
-          <div class="cafe-scene">
-            <img id="scene-art" class="scene-art" src="assets/cloud-cafe-exterior.png" alt="Warm illustrated Cloud Café scene for the selected troubleshooting layer." />
-            <button class="cafe-object door-path" data-object="door-path" type="button" aria-label="Clear bricks blocking the entrance route"><span class="anomaly brick-block"></span><span class="hotspot-label">Missing route</span></button>
-            <button class="cafe-object open-sign" data-object="open-sign" type="button" aria-label="Correct hanging window sign"><span class="anomaly window-sign sign-text">CLOSED</span><span class="hotspot-label">Window sign</span></button>
-            <button class="cafe-object guard" data-object="guard" type="button" aria-label="Clear blocked customer queue"><span class="anomaly queue-block">QUEUE CLOSED</span><span class="hotspot-label">Queue blocked</span></button>
-            <button class="cafe-object chair" data-object="chair" type="button" aria-label="Restore cashier service health"><span class="anomaly service-down">DOWN</span><span class="hotspot-label">Service health</span></button>
-            <button class="cafe-object register" data-object="register" type="button" aria-label="Configure monitoring alarm"><span class="anomaly alarm-off register-text">OFF</span><span class="hotspot-label">Alarm</span></button>
-            <button class="cafe-object coffee-machine" data-object="coffee-machine" type="button" aria-label="Stop unauthorized storage access"><span class="anomaly mouse-alert">!</span><span class="hotspot-label">Stock theft</span></button>
-            <button class="cafe-object order-pile" data-object="order-pile" type="button" aria-label="Organize overflowing printed orders"><span class="anomaly order-printer">99+</span><span class="hotspot-label">Orders</span></button>
-            <button class="cafe-object staff-pass" data-object="staff-pass" type="button" aria-label="Encrypt customer orders"><span class="anomaly unlocked-orders pass-text">UNLOCKED</span><span class="hotspot-label">Encryption</span></button>
-            <button class="cafe-object storage-box" data-object="storage-box" type="button" aria-label="Label storage box"><span class="anomaly question-box">?</span><span class="hotspot-label">Storage box</span></button>
-            <button class="cafe-object log-book" data-object="log-book" type="button" aria-label="Enable log book"><span class="anomaly blank-log">NO LOGS</span><span class="hotspot-label">Log book</span></button>
+          <h3 id="incident-title">Public app unreachable</h3>
+          <p id="incident-summary">Users cannot reach the public application endpoint after a subnet or route change.</p>
+
+          <div class="diagnostic-grid">
+            <div>
+              <p class="label">User impact</p>
+              <p id="incident-impact">External users see timeout or connection refused errors.</p>
+            </div>
+            <div>
+              <p class="label">Likely cause</p>
+              <p id="incident-cause">The public subnet route table may not point internet-bound traffic to an attached Internet Gateway.</p>
+            </div>
           </div>
-        </section>
+
+          <div class="checklist-block">
+            <p class="label">First checks</p>
+            <ol id="incident-checks"></ol>
+          </div>
+        </article>
       </div>
     </section>
 
-    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <div class="modal-card">
-        <button id="close-modal" class="modal-close" type="button" aria-label="Close dialog">×</button>
-        <p class="eyebrow">Issue fixed</p>
-        <h2 id="modal-title">You fixed the issue.</h2>
-        <div class="modal-grid">
-          <div><h3>Real-world problem</h3><p id="modal-real"></p></div>
-          <div><h3>AWS equivalent</h3><p id="modal-cloud"></p></div>
-          <div><h3>AWS services</h3><p id="modal-services"></p></div>
-        </div>
-        <div class="modal-steps"><h3>Troubleshooting checks</h3><ul id="modal-steps"></ul></div>
-        <div class="modal-actions"><button id="modal-new-issue" class="button primary" type="button">Try Another Issue</button><a class="button secondary" href="#documentation">View AWS Documentation</a></div>
-      </div>
-    </div>
-
-    <section id="mapping" class="section mapping-section page-section" data-page-section="game">
-      <div class="section-heading"><p class="eyebrow">Technical Mapping</p><h2>From symptom to cloud service</h2><p>The support index behind the lab: visible user symptoms mapped to AWS concepts and primary checks.</p></div>
-      <div class="mapping-table-wrap">
-        <table class="mapping-table">
-          <thead><tr><th>Café incident</th><th>AWS concept</th><th>Primary checks</th></tr></thead>
-          <tbody>
-            <tr><td>Bricks block the entrance route</td><td>VPC route table / Internet Gateway</td><td>Route table, subnet association, IGW attachment</td></tr>
-            <tr><td>Window sign says CLOSED</td><td>DNS or public endpoint mismatch</td><td>Route 53 record, load balancer or CloudFront DNS, target endpoint</td></tr>
-            <tr><td>Queue barrier blocks a customer</td><td>Security Group / NACL path blocking</td><td>Inbound rule, NACL allow/deny order, route path</td></tr>
-            <tr><td>Cashier terminal shows DOWN</td><td>Unhealthy backend target</td><td>Target group health, EC2 status, app process and port</td></tr>
-            <tr><td>Storage box has no label</td><td>S3 object organization</td><td>Bucket naming, prefixes, tags, IAM boundaries</td></tr>
-            <tr><td>Mouse steals stock</td><td>Storage policy too open</td><td>S3 bucket policy, IAM access, GuardDuty or Access Analyzer findings</td></tr>
-            <tr><td>No stock records</td><td>Missing audit logs</td><td>CloudTrail data events, S3 access logs, CloudWatch Logs</td></tr>
-            <tr><td>Alarm is OFF</td><td>Monitoring not configured</td><td>CloudWatch alarm, metric threshold, SNS action and subscription</td></tr>
-            <tr><td>Orders print faster than staff can process</td><td>Workload buffering</td><td>SQS queue, producer/consumer rate, retry handling</td></tr>
-            <tr><td>Order folder is unlocked</td><td>Encryption and data protection</td><td>KMS key, TLS, encrypted storage, secret handling</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="documentation" class="section docs-section page-section" data-page-section="game">
-      <div class="section-heading"><p class="eyebrow">Documentation</p><h2>AWS Project Behind the Lab</h2><p>The lab connects to secure cloud operations practice: private EC2 access, VPC networking, monitoring, alerting, and incident-response thinking.</p></div>
-      <div class="cards-grid">
-        <article class="info-card"><h3>VPC Networking</h3><p>Public and private subnets separate internet-facing resources from internal workloads.</p></article>
-        <article class="info-card"><h3>Private EC2</h3><p>The internal server has no public IP and should not be directly exposed to the internet.</p></article>
-        <article class="info-card"><h3>Session Manager</h3><p>Administrators can access the private EC2 instance through IAM and AWS Systems Manager.</p></article>
-        <article class="info-card"><h3>CloudWatch + SNS</h3><p>CPU alarms detect high utilization and send email notifications through SNS.</p></article>
-      </div>
-      <div class="workflow"><h3>Planned AWS workflow</h3><ol><li>Create a custom VPC with public and private subnets.</li><li>Attach an Internet Gateway to the public route table.</li><li>Use a NAT Gateway for private subnet outbound internet access.</li><li>Launch a private EC2 instance without a public IP address.</li><li>Attach an IAM role with Systems Manager permissions.</li><li>Connect using Session Manager instead of opening SSH to the world.</li><li>Create a CloudWatch CPU alarm and connect it to an SNS email topic.</li><li>Run a stress test, confirm the alarm, and document screenshots.</li></ol></div>
-    </section>
-
-    <section id="troubleshooting" class="section troubleshooting-section page-section" data-page-section="game">
-      <div class="section-heading"><p class="eyebrow">Cloud support mindset</p><h2>Troubleshooting Notes</h2></div>
-      <div class="cards-grid">
-        <article class="info-card"><h3>Private EC2 cannot reach internet</h3><p>Check private route table, NAT Gateway status, public subnet route to IGW, SG outbound, and NACL rules.</p></article>
-        <article class="info-card"><h3>Session Manager unavailable</h3><p>Check IAM role, SSM Agent, instance profile, NAT Gateway, or SSM VPC endpoints.</p></article>
-        <article class="info-card"><h3>No SNS email received</h3><p>Confirm the SNS subscription, alarm action, alarm state, and spam folder.</p></article>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-section page-section active-page" data-page-section="about">
+    <section id="runbook" class="section split-section">
       <div class="section-heading">
-        <p class="eyebrow">Contact</p>
-        <h2>Get in Touch</h2>
-        <p>For technical support, IT support, cloud support trainee, or help desk opportunities.</p>
+        <p class="eyebrow">Runbook</p>
+        <h2>Support workflow.</h2>
       </div>
-      <div class="contact-actions">
-        <a class="button primary" href="mailto:phamkhanhnhat78@gmail.com">phamkhanhnhat78@gmail.com</a>
-        <a class="button secondary" href="https://www.linkedin.com/in/khanhnhat-pham/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="button secondary" href="https://github.com/phamkhanhnhat78-stack" target="_blank" rel="noreferrer">GitHub</a>
+      <div class="runbook-list">
+        <article>
+          <span>01</span>
+          <h3>Define the impact</h3>
+          <p>Confirm who is affected, what changed, and whether the issue is public access, internal access, degraded service, or data risk.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Locate the layer</h3>
+          <p>Map the symptom to networking, compute, identity, storage, monitoring, or application health before changing anything.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Check the basics</h3>
+          <p>Review route tables, security groups, IAM roles, service health, logs, metrics, and recent configuration changes.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Document the fix</h3>
+          <p>Record the symptom, cause, evidence, change made, and prevention step in clear language for future support handoff.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="architecture" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Architecture</p>
+        <h2>Reference support path.</h2>
+        <p>A simplified path for checking public traffic, private workload access, storage, monitoring, and support escalation.</p>
+      </div>
+      <div class="architecture-map" aria-label="Cloud architecture support path">
+        <div class="arch-node edge">Users</div>
+        <div class="arch-line"></div>
+        <div class="arch-node public">DNS / Load Balancer</div>
+        <div class="arch-line"></div>
+        <div class="arch-node app">Private App Targets</div>
+        <div class="arch-line"></div>
+        <div class="arch-node data">Storage / Logs</div>
+        <div class="arch-line"></div>
+        <div class="arch-node monitor">CloudWatch / SNS</div>
+      </div>
+    </section>
+
+    <section id="evidence" class="section evidence-section">
+      <div class="section-heading">
+        <p class="eyebrow">Evidence</p>
+        <h2>What this project demonstrates.</h2>
+      </div>
+      <div class="evidence-grid">
+        <article>
+          <h3>Technical translation</h3>
+          <p>Connects user-facing symptoms with infrastructure layers and concrete support checks.</p>
+        </article>
+        <article>
+          <h3>Operations mindset</h3>
+          <p>Uses inventory, routing, workflow, and escalation thinking as a foundation for cloud support.</p>
+        </article>
+        <article>
+          <h3>Static deployment</h3>
+          <p>Built with HTML, CSS, and JavaScript for GitHub Pages deployment without a framework dependency.</p>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><p>Khanh Pham Technical & IT Support Portfolio</p><a href="#profile">About</a><a href="#contact">Contact</a><a href="https://github.com/phamkhanhnhat78-stack/khanh-cloud-systems-portfolio" target="_blank" rel="noreferrer">Source Repository</a></footer>
-  <script src="script.js?v=11"></script>
+  <footer class="footer">
+    <p>CloudOps Incident Lab</p>
+    <a href="https://github.com/phamkhanhnhat78-stack/cloud-ops-incident-lab" target="_blank" rel="noreferrer">GitHub Repository</a>
+  </footer>
+
+  <script src="script.js?v=1"></script>
 </body>
 </html>
